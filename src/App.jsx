@@ -15,9 +15,9 @@ export default function App() {
       <Sidebar currentView={currentView} onViewChange={setCurrentView} />
       
       <main className="main">
-        <Dashboard />
-        <Goals />
-        <Kanban />
+        {currentView === 'dashboard' && <Dashboard />}
+        {currentView === 'goals' && <Goals />}
+        {currentView === 'kanban' && <Kanban />}
       </main>
       
       <Chat />
